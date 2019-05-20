@@ -1,36 +1,73 @@
 <html>
-    <head>
-        <title>Test</title>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="star_system.js"></script>
-        <link rel="stylesheet" type="text/css" href="star_system.css"/>
-        <script>
-            jQuery(document).ready(function(){
-                $('.star_system')._starSystem();
-            });
-        </script>
-    </head>
 
-    <body>
-        <div class="star_system"
-             total="10"
-             active="5"
-             color="blue"></div>
-         <div class="star_system"
-             total="10"
-             active="5"
-             color="red"></div>
-         <div class="star_system"
-             total="10"
-             active="5"
-             color="green"></div>
-         <div class="star_system"
-             total="10"
-             active="5"
-             color="purple"></div>
-         <div class="star_system"
-             total="10"
-             active="5"
-             color="green"></div>
-    </body>
+<head>
+  <title>Jquery Star Rating Display Plugin v1.0</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <script src="lib/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/milligram.min.css" />
+  <link rel="stylesheet" type="text/css" href="lib/normalize.css" />
+  <script src="star-system/jquery.starRating.js"></script>
+  <link rel="stylesheet" type="text/css" href="star-system/star_system.css" />
+
+  <script>
+    jQuery(document).ready(function () {
+      $('.star_system').starRating();
+      $('.star_system.no_anim').starRating({animated: false});
+    });
+
+    
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div style="display: flex">
+      <h1>Simple Jquery Star Rating Display Plugin</h1>
+      <div style="margin: auto 1.2em;" class="star_system" total="5" active="4"></div>
+    </div>
+
+    <hr>
+    <h3>Inline Demo</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Pixar Movie</th>
+          <th>Year</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TOY STORY 3</td>
+          <td>2010</td>
+          <td>
+            <div class="star_system" total="5" active="5" color="green"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Brave</td>
+          <td>2012</td>
+          <td>
+            <div class="star_system" total="5" active="4" color="purple"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>CARS 3*</td>
+          <td>2017</td>
+          <td>
+            <div class="star_system" total="5" active="3" color="red"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>* 70% on Rotten tomatoes. Roughly translated.</p>
+
+    <hr>
+    <h3>No Animation</h3>
+    <div class="star_system no_anim" total="5" active="2" color="purple"></div>
+
+  </div>
+</body>
+
 </html>
